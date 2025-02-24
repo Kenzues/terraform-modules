@@ -37,3 +37,8 @@ module "security-group" {
 
 }
 
+module "ecs-task-execution-role" {
+  source       = "../modules/ecs-task-execution-role"
+  project_name = module.vpc.project_name
+}
+
